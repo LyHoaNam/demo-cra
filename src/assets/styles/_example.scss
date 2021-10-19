@@ -1,0 +1,38 @@
+.header {
+  background-color: $dark-blue;
+  color: $lightest-green;
+  width: 100%;
+  height: 80px;
+  margin-bottom: 20px;
+}
+%base-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-default {
+  height: 40px;
+  font-size: convertPxToRem(16);
+  background-color: $light-green;
+  color: $lightest-green;
+  cursor: pointer;
+  max-width: 200px;
+  @extend %base-center;
+}
+.card {
+  width: 100%;
+  background-color: $light-grey;
+  margin-bottom: 20px;
+  &-footer {
+    background-color: $light-green;
+    width: 100%;
+    height: 10px;
+  }
+  &-content {
+    color: $lightest-green;
+    height: 100px;
+    width: 100%;
+    @extend %base-center;
+    font-size: convertPxToRem(16);
+  }
+}

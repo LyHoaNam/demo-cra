@@ -1,0 +1,35 @@
+/* SCREEN */
+// Extra small screen / phone
+$xs: 0; //from
+$sm: 768px; //to
+// Medium screen / tablet
+$smd: 769px; //from to
+$md: 1023px;
+// Large screen / desktop
+$slg: 1023px;
+$lg: 1024px; //from to
+// iphone 5
+$ip5: 320px;
+
+$max-width: 803px;
+$max-width-big: 1366px;
+$min-width: 415px;
+$largest-width: 1919px;
+
+/* FONT WEIGHT */
+$fw-medium: 500;
+$fw-bold: 700;
+
+/* COLOR */
+$dark-blue: #23233c;
+$royal-blue: #3A466D;
+$light-green: #6bc37c;
+$lightest-green: #f2f6ff;
+$light-grey: #9e9e9e;
+
+/* BUTTON */
+$btn-selected: #1d1d30;
+
+/* TEXT COLOR */
+$primary-text-color: #7f8da0;
+$green-text: #6cc57c;

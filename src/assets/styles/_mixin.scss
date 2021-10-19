@@ -1,0 +1,54 @@
+@import "./variables";
+
+/* BOX SHADOW */
+@mixin box-shadow($x, $y, $blur, $spread, $color) {
+  -webkit-box-shadow: $x $y $blur $spread $color;
+  -moz-box-shadow: $x $y $blur $spread $color;
+  -ms-flex-preferred-size: $x $y $blur $spread $color;
+  box-shadow: $x $y $blur $spread $color;
+}
+
+/* PX TO REM */
+@mixin convertPxToRem($px) {
+  font-size: $px + px;
+  font-size: $px/16 + rem;
+}
+
+/* RESPONSIVE */
+@mixin query-min-width($value) {
+  @media screen and (min-width: $value) {
+    @content;
+  }
+}
+
+@mixin query-min-max-width($value-max, $value-min) {
+  @media screen and (max-width: $value-max) and (min-width: $value-min) {
+    @content;
+  }
+}
+
+@mixin iphone5-only {
+  @media screen and (max-width: $ip5) { @content; }
+}
+@mixin small-only {
+  @media screen and (max-width: $sm) { @content; }
+}
+@mixin medium-only {
+  @include query-min-max-width($smd, $md) { @content; }
+}
+@mixin large-down {
+  @media screen and (max-width: $lg) { @content; }
+}
+@mixin large-medium {
+  @include query-min-max-width($max-width-big, $lg) { @content; }
+}
+@mixin large-only {
+  @include query-min-width($max-width-big) { @content; }
+}
+@mixin custom-small-only {
+  @media screen and (max-width: $min-width) { @content; }
+}
+@mixin custom-large-only {
+  @include query-min-max-width($largest-width, $max-width-big) { @content; }
+
+}
